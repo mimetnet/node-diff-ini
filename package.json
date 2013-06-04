@@ -1,6 +1,6 @@
 {
   "name": "diff-ini",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Load two INI files and return their differences",
   "main": "index.js",
   "bin": "./bin/ini-diff.js",
