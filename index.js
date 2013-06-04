@@ -4,6 +4,7 @@ var fs = require('fs')
     , async = require('async')
     , diff = require('deep-diff').diff
     , concat = require('concat-stream')
+    , pointer = require('json-pointer')
 ;
 
 module.exports = iniDiff;
@@ -50,53 +51,44 @@ function iniDiff(oldFile, newFile, done) {
     });
 }
 
-function printO(log, pre, obj) {
-    var str = ini.encode(obj);
+function printO(log, op, path, obj) {
+    var k, dict;
 
-    if (str) {
-        str.split(/\r?\n/).forEach(function(line) {
-            if (line && line.length) {
-                log(pre + line + os.EOL);
-            }
-        });
-    } else {
-        log(pre + os.EOL);
+    dict = pointer.dict(obj);
+
+    for (k in dict) {
+        if ('/' !== k) {
+            log(op + path + k + ' = ' + dict[k] + os.EOL);
+        } else {
+            log(op + path + ' = ' + dict[k] + os.EOL);
+        }
     }
 }
 
 function printE(log, row) {
-    var path = row.path.join('.');
+    var path = row.path.join('/');
 
     if ('object' !== typeof(row.lhs)) {
         log('-' + path + ' = ' + row.lhs + os.EOL);
     } else {
-        printO(log, '-  ', row.lhs);
+        printO(log, '+', path, row.lhs);
     }
 
     if ('object' !== typeof(row.rhs)) {
         log('+' + path + ' = ' + row.rhs + os.EOL);
     } else {
-        printO(log, '+  ', row.rhs);
-    }
-}
-
-function printM(log, op, row, key) {
-    if ('object' !== typeof(row[key])) {
-        var path = row.path.join('.');
-
-        log(op + path + ' = ' + row[key] + os.EOL);
-    } else {
-        log(op + row.path.join('.') + os.EOL);
-        printO(log, op + '   ', row[key]);
+        printO(log, '+', path, row.rhs);
     }
 }
 
 function printN(log, row) {
-    printM(log, '+', row, 'rhs');
+    var path = row.path.join('/');
+    printO(log, '+', path, row.rhs);
 }
 
 function printD(log, row) {
-    printM(log, '-', row, 'lhs');
+    var path = row.path.join('/');
+    printO(log, '-', path, row.lhs);
 }
 
 function printDiff(rows, log) {
@@ -124,7 +116,5 @@ function printDiff(rows, log) {
                 log('Unknown:', row.kind + os.EOL);
                 break;
         }
-
-        log(os.EOL);
     });
 }

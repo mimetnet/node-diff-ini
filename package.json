@@ -1,6 +1,6 @@
 {
   "name": "diff-ini",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Load two INI files and return their differences",
   "main": "index.js",
   "bin": "./bin/ini-diff.js",
@@ -24,7 +24,8 @@
     "async": "~0.2.9",
     "concat-stream": "~1.0.0",
     "deep-diff": "~0.1.0",
-    "ini": "~1.1.0"
+    "ini": "~1.1.0",
+    "json-pointer": "git+https://github.com/manuelstofer/json-pointer.git"
   },
   "devDependencies": {
     "tap": "~0.4.0"

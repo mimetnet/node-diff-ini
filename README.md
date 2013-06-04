@@ -28,22 +28,20 @@ When a `key` changes:
 When a `key` changes inside of a `section`:
 
 ```
--Section.Key = Key Route
-+Section.Key = Key
+-section/key = old
++section/key = new
 ```
 
 When a `section` is erased:
 
 ```
--Section.B
--  Name = Foo and Bar
+-section/one/key = value
 ```
 
 When a `section` is added:
 
 ```
-+Section.C
-+  Name = Foo and Bar
++section/two/key = value
 ```
 
 
@@ -86,9 +84,10 @@ Probably tons! It's working the way I need it to right now, so let me know if yo
 - [deep-diff](https://github.com/flitbit/diff)
 - [ini](https://github.com/isaacs/ini)
 
-  [1]: https://api.travis-ci.org/mimetnet/node-diff-ini.png
-  [2]: https://travis-ci.org/mimetnet/node-diff-ini
-  [3]: https://badge.fury.io/js/diff-ini.png
-  [4]: https://badge.fury.io/js/diff-ini
-  [5]: https://david-dm.org/mimetnet/node-diff-ini.png
-  [6]: https://david-dm.org/mimetnet/node-diff-ini
+
+[1]: https://api.travis-ci.org/mimetnet/node-diff-ini.png
+[2]: https://travis-ci.org/mimetnet/node-diff-ini
+[3]: https://badge.fury.io/js/diff-ini.png
+[4]: https://badge.fury.io/js/diff-ini
+[5]: https://david-dm.org/mimetnet/node-diff-ini.png
+[6]: https://david-dm.org/mimetnet/node-diff-ini
