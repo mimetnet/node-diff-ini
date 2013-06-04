@@ -1,0 +1,26 @@
+{
+  "name": "diff-ini",
+  "version": "0.0.1",
+  "description": "Load two INI files and return their differences",
+  "main": "index.js",
+  "bin": "./bin/ini-diff.js",
+  "preferGlobal": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "ini",
+    "diff",
+    "cli",
+    "library"
+  ],
+  "author": "Matthew Metnetsky <matthew@cowarthill.com>",
+  "license": "MIT",
+  "dependencies": {
+    "async": "~0.2.9",
+    "concat-stream": "~1.0.0",
+    "deep-diff": "~0.1.0",
+    "ini": "~1.1.0"
+  }
+}
