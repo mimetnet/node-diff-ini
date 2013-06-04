@@ -2,7 +2,7 @@
 
 Compare two INI files for differences. This is both a library and a command-line tool.
 
-[![npm version][3]][4] [![dependencies][5]][6]
+[![build status][1]][2] [![npm version][3]][4] [![dependencies][5]][6]
 
 ## Command-Line
 
