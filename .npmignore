@@ -8,7 +8,6 @@
 *.pid
 *.gz
 *.tgz
-*.ini
 *.lock
 
 .travis.yml
