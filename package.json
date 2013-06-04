@@ -6,7 +6,7 @@
   "bin": "./bin/ini-diff.js",
   "preferGlobal": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/tap ./test/"
   },
   "repository": "",
   "keywords": [
@@ -22,5 +22,11 @@
     "concat-stream": "~1.0.0",
     "deep-diff": "~0.1.0",
     "ini": "~1.1.0"
+  },
+  "devDependencies": {
+    "tap": "~0.4.0"
+  },
+  "directories": {
+    "test": "test"
   }
 }
