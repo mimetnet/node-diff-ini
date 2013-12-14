@@ -22,7 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "async": "~0.2.9",
-    "concat-stream": "~1.0.0",
+    "concat-stream": "~1.2.0",
     "deep-diff": "~0.1.0",
     "ini": "~1.1.0",
     "json-pointer": "~0.0.4"
