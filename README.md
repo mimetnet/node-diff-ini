@@ -2,7 +2,7 @@
 
 Compare two INI files for differences. This is both a library and a command-line tool.
 
-[![build status][1]][2] [![npm version][3]][4] [![dependencies][5]][6]
+[![npm version][3]][4] [![build status][1]][2]  [![dependencies][5]][6] [![devDependencies][7]][8]
 
 ## Command-Line
 
@@ -84,10 +84,15 @@ Probably tons! It's working the way I need it to right now, so let me know if yo
 - [deep-diff](https://github.com/flitbit/diff)
 - [ini](https://github.com/isaacs/ini)
 
+# License
 
-[1]: https://api.travis-ci.org/mimetnet/node-diff-ini.png
+[MIT License](https://github.com/mimetnet/node-diff-ini/blob/master/LICENSE)
+
+[1]: https://api.travis-ci.org/mimetnet/node-diff-ini.svg
 [2]: https://travis-ci.org/mimetnet/node-diff-ini
-[3]: https://badge.fury.io/js/diff-ini.png
+[3]: https://badge.fury.io/js/diff-ini.svg
 [4]: https://badge.fury.io/js/diff-ini
-[5]: https://david-dm.org/mimetnet/node-diff-ini.png
+[5]: https://david-dm.org/mimetnet/node-diff-ini.svg
 [6]: https://david-dm.org/mimetnet/node-diff-ini
+[7]: https://david-dm.org/mimetnet/node-diff-ini/dev-status.svg?#info=devDependencies
+[8]: https://david-dm.org/mimetnet/node-diff-ini/#info=devDependencies
