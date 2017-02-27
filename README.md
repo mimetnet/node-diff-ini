@@ -1,5 +1,7 @@
 # diff-ini
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mimetnet/node-diff-ini.svg)](https://greenkeeper.io/)
+
 Compare two INI files for differences. This is both a library and a command-line tool.
 
 [![npm version][3]][4] [![build status][1]][2]  [![dependencies][5]][6] [![devDependencies][7]][8]
